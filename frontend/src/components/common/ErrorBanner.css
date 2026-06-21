@@ -1,0 +1,46 @@
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.error-icon {
+  color: #dc2626;
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+}
+
+.error-message {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.error-dismiss {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.error-dismiss:hover {
+  background: rgba(239, 68, 68, 0.15);
+}

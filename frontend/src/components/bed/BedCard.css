@@ -1,0 +1,121 @@
+.bed-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.bed-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.bed-card-green::before { background: #10b981; }
+.bed-card-red::before { background: #ef4444; }
+.bed-card-amber::before { background: #f59e0b; }
+
+.bed-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.bed-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.bed-card-number {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bed-icon {
+  font-size: 1.5rem;
+}
+
+.bed-number-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.bed-card-actions {
+  display: flex;
+  gap: 0.2rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.bed-card:hover .bed-card-actions {
+  opacity: 1;
+}
+
+.bed-action-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  transition: all 0.2s;
+}
+
+.bed-action-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.bed-action-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.bed-card-status {
+  display: flex;
+}
+
+.bed-status-select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.bed-status-select:hover {
+  background: var(--bg-secondary);
+}
+
+.bed-status-select:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(42, 139, 117, 0.2);
+}
+
+.bed-select-green { border-color: rgba(16, 185, 129, 0.5); }
+.bed-select-red { border-color: rgba(239, 68, 68, 0.5); }
+.bed-select-amber { border-color: rgba(245, 158, 11, 0.5); }
+
+.bed-status-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
